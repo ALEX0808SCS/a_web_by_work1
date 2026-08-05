@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>我的工单 - 市政设施管理系统</title>
+
+    <link rel="stylesheet" href="/css/style2.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <script src="/js/app.js" defer></script>
+  </head>
+
+  <body>
+    <!-- 顶部导航 -->
+    <header class="header">
+      <div class="logo">
+        <i class="fa-solid fa-city"></i>
+        <span>市政设施管理系统</span>
+      </div>
+
+      <nav class="nav">
+        <a href="/User/home.html">
+          <i class="fa-solid fa-house"></i>
+          首页
+        </a>
+
+        <a href="/User/repair.html">
+          <i class="fa-solid fa-screwdriver-wrench"></i>
+          我要报修
+        </a>
+
+        <a href="/User/myRepair.html" class="active">
+          <i class="fa-solid fa-list-check"></i>
+          我的工单
+        </a>
+
+        <a href="/User/profile.html">
+          <i class="fa-solid fa-user"></i>
+          个人中心
+        </a>
+      </nav>
+
+      <button class="logout-btn" onclick="logout()">
+        <i class="fa-solid fa-right-from-bracket"></i>
+        退出登录
+      </button>
+    </header>
+
+    <!-- 主体 -->
+
+    <main class="container">
+      <div class="page-title">
+        <h2>我的工单</h2>
+
+        <p>查看您提交的报修记录及处理进度</p>
+      </div>
+
+      <div class="table-card">
+        <table class="repair-table">
+          <thead>
+            <tr>
+              <th>工单编号</th>
+
+              <th>报修类型</th>
+
+              <th>报修地点</th>
+
+              <th>提交时间</th>
+
+              <th>处理状态</th>
+
+              <th>操作</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>RP2026001</td>
+
+              <td>路灯损坏</td>
+
+              <td>人民路与中山路路口</td>
+
+              <td>2026-06-20</td>
+
+              <td>
+                <span class="status processing"> 处理中 </span>
+              </td>
+
+              <td>
+                <button class="view-btn" onclick="viewRepair('RP2026001')">
+                  查看详情
+                </button>
+              </td>
+            </tr>
+
+            <tr>
+              <td>RP2026002</td>
+
+              <td>井盖缺失</td>
+
+              <td>文化广场</td>
+
+              <td>2026-06-18</td>
+
+              <td>
+                <span class="status completed"> 已完成 </span>
+              </td>
+
+              <td>
+                <button
+                  class="view-btn"
+                  onclick="location.href = 'evaluate.html'"
+                >
+                  立即评价
+                </button>
+              </td>
+            </tr>
+
+            <tr>
+              <td>RP2026003</td>
+
+              <td>垃圾桶损坏</td>
+
+              <td>幸福公园</td>
+
+              <td>2026-06-17</td>
+
+              <td>
+                <span class="status accepted"> 已受理 </span>
+              </td>
+
+              <td>
+                <button class="view-btn" onclick="viewRepair('RP2026003')">
+                  查看详情
+                </button>
+              </td>
+            </tr>
+
+            <tr>
+              <td>RP2026004</td>
+
+              <td>道路破损</td>
+
+              <td>建设大道</td>
+
+              <td>2026-06-15</td>
+
+              <td>
+                <span class="status pending"> 待受理 </span>
+              </td>
+
+              <td>
+                <button class="view-btn" onclick="viewRepair('RP2026004')">
+                  查看详情
+                </button>
+              </td>
+            </tr>
+
+            <tr>
+              <td>RP2026005</td>
+
+              <td>绿化损坏</td>
+
+              <td>滨江公园</td>
+
+              <td>2026-06-13</td>
+
+              <td>
+                <span class="status completed"> 已完成 </span>
+              </td>
+              <td>
+                <button class="evaluated-btn" disabled>已评价</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+
+    <!-- 页脚 -->
+
+    <footer>Copyright © 2026 市政设施管理系统</footer>
+  </body>
+</html>

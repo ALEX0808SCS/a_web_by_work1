@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>市政设施管理系统</title>
+
+    <link rel="stylesheet" href="/css/style1.css" />
+  </head>
+
+  <body>
+    <div class="admin-container">
+      <!-- 左侧菜单 -->
+      <aside class="sidebar">
+        <div class="logo">
+          <h2>市政设施管理系统</h2>
+        </div>
+
+        <ul class="menu">
+          <li class="active">
+            <a href="/Admin/admin.html"> 🏠 首页 </a>
+          </li>
+
+          <li>
+            <a href="/Admin/user.html"> 👤 用户管理 </a>
+          </li>
+
+          <li>
+            <a href="/Admin/repair.html"> 📝 工单管理 </a>
+          </li>
+
+          <li>
+            <a href="/Admin/facility.html"> 🔧 设施管理 </a>
+          </li>
+
+          <li>
+            <a href="/Admin/statistics.html"> 📊 数据统计 </a>
+          </li>
+          <li>
+            <a href="/Admin/archive.html">📁档案管理</a>
+          </li>
+          <li>
+            <a href="/Admin/quality.html">⭐服务质量</a>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- 右侧主体 -->
+      <main class="main-content">
+        <!-- 顶部 -->
+        <header class="topbar">
+          <div class="welcome">欢迎使用市政设施管理系统</div>
+
+          <div class="admin-info">
+            <img src="images/avatar.png" alt="管理员" />
+
+            <span>管理员</span>
+
+            <button class="btn btn-primary" onclick="logout()">退出登录</button>
+          </div>
+        </header>
+
+        <!-- 内容 -->
+        <section class="content">
+          <!-- 四个统计卡片 -->
+          <div class="card-group">
+            <div class="card">
+              <h3>今日报修</h3>
+              <p>26</p>
+            </div>
+
+            <div class="card">
+              <h3>待审核</h3>
+              <p>12</p>
+            </div>
+
+            <div class="card">
+              <h3>维修中</h3>
+              <p>8</p>
+            </div>
+
+            <div class="card">
+              <h3>已完成</h3>
+              <p>106</p>
+            </div>
+          </div>
+
+          <!-- 最近报修 -->
+          <div class="table-box">
+            <div class="table-title">最近报修</div>
+
+            <table>
+              <thead>
+                <tr>
+                  <th>工单编号</th>
+                  <th>设施名称</th>
+                  <th>报修人</th>
+                  <th>状态</th>
+                </tr>
+              </thead>
+
+              <tbody id="repairTable">
+                <tr>
+                  <td>R2026001</td>
+                  <td>路灯损坏</td>
+                  <td>张三</td>
+                  <td>维修中</td>
+                </tr>
+
+                <tr>
+                  <td>R2026002</td>
+                  <td>井盖破损</td>
+                  <td>李四</td>
+                  <td>待审核</td>
+                </tr>
+
+                <tr>
+                  <td>R2026003</td>
+                  <td>公交站牌损坏</td>
+                  <td>王五</td>
+                  <td>已完成</td>
+                </tr>
+
+                <tr>
+                  <td>R2026004</td>
+                  <td>垃圾桶破损</td>
+                  <td>赵六</td>
+                  <td>维修中</td>
+                </tr>
+
+                <tr>
+                  <td>R2026005</td>
+                  <td>护栏损坏</td>
+                  <td>刘强</td>
+                  <td>待审核</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="/js/admin.js"></script>
+  </body>
+</html>

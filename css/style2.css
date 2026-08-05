@@ -1,0 +1,1230 @@
+/* ===========================
+   全局样式
+=========================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Microsoft YaHei", sans-serif;
+}
+
+body {
+  background: #f5f8fc;
+  color: #333;
+}
+
+/* ===========================
+   顶部导航
+=========================== */
+
+.header {
+  width: 100%;
+  height: 70px;
+  background: #1976d2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 80px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.logo h2 {
+  color: #fff;
+  font-size: 26px;
+  font-weight: normal;
+}
+
+.header nav {
+  display: flex;
+  gap: 35px;
+}
+
+.header nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.header nav a:hover {
+  color: #dbeeff;
+}
+
+/* ===========================
+   登录区域
+=========================== */
+
+.login-section {
+  width: 100%;
+  min-height: calc(100vh - 140px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #e8f2ff, #f8fbff);
+}
+
+.login-box {
+  width: 420px;
+  background: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  animation: show 0.5s ease;
+}
+
+.login-box h1 {
+  text-align: center;
+  color: #1976d2;
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #777;
+  margin-bottom: 35px;
+  font-size: 14px;
+}
+
+/* ===========================
+   输入框
+=========================== */
+
+.input-group {
+  margin-bottom: 22px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #555;
+  font-size: 15px;
+}
+
+.input-group input {
+  width: 100%;
+  height: 46px;
+  padding: 0 15px;
+  border: 1px solid #d6d6d6;
+  border-radius: 6px;
+  outline: none;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.input-group input:focus {
+  border-color: #1976d2;
+  box-shadow: 0 0 6px rgba(25, 118, 210, 0.2);
+}
+
+/* ===========================
+   登录按钮
+=========================== */
+
+#loginBtn {
+  width: 100%;
+  height: 48px;
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 17px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#loginBtn:hover {
+  background: #1565c0;
+}
+
+#loginBtn:active {
+  transform: scale(0.98);
+}
+
+/* ===========================
+   注册链接
+=========================== */
+
+.login-link {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  font-size: 14px;
+}
+
+.login-link a {
+  color: #1976d2;
+  text-decoration: none;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+.login-link span {
+  color: #999;
+}
+
+/* ===========================
+   页脚
+=========================== */
+
+footer {
+  height: 70px;
+  background: #fff;
+  border-top: 1px solid #e5e5e5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #777;
+  font-size: 13px;
+  line-height: 24px;
+}
+
+/* ===========================
+   动画
+=========================== */
+
+@keyframes show {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===========================
+   响应式
+=========================== */
+
+@media (max-width: 768px) {
+  .header {
+    padding: 0 20px;
+    flex-direction: column;
+    justify-content: center;
+    height: 100px;
+  }
+
+  .header nav {
+    gap: 18px;
+    margin-top: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .login-box {
+    width: 90%;
+    padding: 30px;
+  }
+
+  .logo h2 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header nav {
+    font-size: 14px;
+  }
+
+  .login-box h1 {
+    font-size: 26px;
+  }
+
+  .subtitle {
+    font-size: 13px;
+  }
+}
+
+/* ========================================
+   我要报修页面
+======================================== */
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 100px auto 40px;
+}
+
+.page-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.page-title h2 {
+  color: #1565c0;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.page-title p {
+  color: #666;
+  font-size: 16px;
+}
+
+/* 表单卡片 */
+
+.form-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 22px;
+}
+
+.form-group label {
+  font-size: 15px;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 15px;
+  color: #333;
+  border: 1px solid #d6dce5;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.3s ease;
+  background: #fff;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #1e88e5;
+  box-shadow: 0 0 8px rgba(30, 136, 229, 0.2);
+}
+
+/* 文件上传 */
+
+input[type="file"] {
+  padding: 10px;
+  cursor: pointer;
+}
+
+input[type="file"]::file-selector-button {
+  background: #1e88e5;
+  color: #fff;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-right: 15px;
+  transition: 0.3s;
+}
+
+input[type="file"]::file-selector-button:hover {
+  background: #1565c0;
+}
+
+/* 按钮 */
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 35px;
+}
+
+.submit-btn,
+.reset-btn {
+  border: none;
+  padding: 13px 34px;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit-btn {
+  background: #1e88e5;
+  color: #fff;
+}
+
+.submit-btn:hover {
+  background: #1565c0;
+  transform: translateY(-2px);
+}
+
+.reset-btn {
+  background: #e0e0e0;
+  color: #333;
+}
+
+.reset-btn:hover {
+  background: #cfcfcf;
+  transform: translateY(-2px);
+}
+
+/* 导航栏 */
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.nav a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.nav a.active {
+  background: rgba(255, 255, 255, 0.28);
+}
+
+/* 退出按钮 */
+
+.logout-btn {
+  background: white;
+  color: #1e88e5;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.logout-btn:hover {
+  background: #e3f2fd;
+}
+
+/* 页脚 */
+
+footer {
+  text-align: center;
+  color: #777;
+  padding: 25px 0;
+  margin-top: 30px;
+}
+
+/* ========================================
+   响应式布局
+======================================== */
+
+@media (max-width: 992px) {
+  .header {
+    flex-wrap: wrap;
+    padding: 15px 20px;
+    height: auto;
+  }
+
+  .nav {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 15px;
+  }
+
+  .container {
+    margin-top: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+  }
+
+  .form-card {
+    padding: 25px;
+  }
+
+  .page-title h2 {
+    font-size: 28px;
+  }
+
+  .button-group {
+    flex-direction: column;
+  }
+
+  .submit-btn,
+  .reset-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-title h2 {
+    font-size: 24px;
+  }
+
+  .page-title p {
+    font-size: 14px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    font-size: 14px;
+  }
+}
+
+/* ========================================
+   我的工单页面
+======================================== */
+
+.table-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  overflow-x: auto;
+}
+
+.repair-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 900px;
+}
+
+.repair-table thead {
+  background: #1e88e5;
+  color: #ffffff;
+}
+
+.repair-table th {
+  padding: 16px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.repair-table td {
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid #e8eef5;
+  color: #555;
+  font-size: 14px;
+}
+
+.repair-table tbody tr {
+  transition: all 0.3s;
+}
+
+.repair-table tbody tr:hover {
+  background: #f5f9ff;
+}
+
+/* ========================================
+   工单状态
+======================================== */
+
+.status {
+  display: inline-block;
+  min-width: 80px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+/* 待受理 */
+
+.pending {
+  background: #eeeeee;
+  color: #666666;
+}
+
+/* 已受理 */
+
+.accepted {
+  background: #e3f2fd;
+  color: #1976d2;
+}
+
+/* 处理中 */
+
+.processing {
+  background: #fff3e0;
+  color: #ef6c00;
+}
+
+/* 已完成 */
+
+.completed {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+/* ========================================
+   查看详情按钮
+======================================== */
+
+.view-btn {
+  border: none;
+  outline: none;
+  background: #1e88e5;
+  color: white;
+  padding: 8px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.view-btn:hover {
+  background: #1565c0;
+  transform: translateY(-2px);
+}
+
+/* ========================================
+   表格斑马纹
+======================================== */
+
+.repair-table tbody tr:nth-child(even) {
+  background: #fafcff;
+}
+
+/* ========================================
+   手机端适配
+======================================== */
+
+@media (max-width: 992px) {
+  .table-card {
+    padding: 20px;
+  }
+
+  .repair-table {
+    min-width: 850px;
+  }
+}
+
+@media (max-width: 768px) {
+  .table-card {
+    padding: 15px;
+  }
+
+  .repair-table th,
+  .repair-table td {
+    padding: 12px;
+    font-size: 13px;
+  }
+
+  .status {
+    min-width: 70px;
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+
+  .view-btn {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .table-card {
+    padding: 10px;
+  }
+
+  .repair-table {
+    min-width: 800px;
+  }
+}
+
+/* ========================================
+   个人中心页面
+======================================== */
+
+.profile-card {
+  display: flex;
+  gap: 35px;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 35px;
+  margin-bottom: 35px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* 左侧 */
+
+.profile-left {
+  width: 280px;
+  text-align: center;
+  border-right: 1px solid #eeeeee;
+  padding-right: 35px;
+}
+
+.avatar {
+  width: 130px;
+  height: 130px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #42a5f5, #1976d2);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+  font-size: 58px;
+
+  box-shadow: 0 8px 20px rgba(30, 136, 229, 0.25);
+}
+
+.profile-left h3 {
+  font-size: 24px;
+  color: #1565c0;
+  margin-bottom: 10px;
+}
+
+.profile-left p {
+  color: #777;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* 右侧 */
+
+.profile-right {
+  flex: 1;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.info-item:last-of-type {
+  margin-bottom: 30px;
+}
+
+.label {
+  width: 120px;
+  font-weight: bold;
+  color: #555;
+}
+
+.value {
+  flex: 1;
+  color: #333;
+}
+
+/* 按钮 */
+
+.profile-buttons {
+  display: flex;
+  gap: 18px;
+  margin-top: 25px;
+}
+
+.primary-btn,
+.warning-btn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  padding: 12px 26px;
+
+  border-radius: 8px;
+
+  color: white;
+
+  font-size: 15px;
+
+  transition: 0.3s;
+}
+
+.primary-btn {
+  background: #1e88e5;
+}
+
+.primary-btn:hover {
+  background: #1565c0;
+  transform: translateY(-2px);
+}
+
+.warning-btn {
+  background: #fb8c00;
+}
+
+.warning-btn:hover {
+  background: #ef6c00;
+  transform: translateY(-2px);
+}
+
+/* ========================================
+   数据统计
+======================================== */
+
+.statistics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.stat-card {
+  background: white;
+  border-radius: 12px;
+  padding: 28px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+
+.stat-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.stat-card i {
+  font-size: 42px;
+  color: #1e88e5;
+  margin-bottom: 15px;
+}
+
+.stat-card h3 {
+  font-size: 30px;
+  color: #1565c0;
+  margin-bottom: 8px;
+}
+
+.stat-card p {
+  color: #777;
+  font-size: 15px;
+}
+
+/* ========================================
+   输入框（以后修改资料可直接使用）
+======================================== */
+
+.profile-right input,
+.profile-right select {
+  width: 100%;
+  padding: 11px 15px;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.profile-right input:focus,
+.profile-right select:focus {
+  border-color: #1e88e5;
+  box-shadow: 0 0 8px rgba(30, 136, 229, 0.18);
+}
+
+/* ========================================
+   图标间距
+======================================== */
+
+.primary-btn i,
+.warning-btn i {
+  margin-right: 8px;
+}
+
+/* ========================================
+   响应式
+======================================== */
+
+@media (max-width: 992px) {
+  .profile-card {
+    flex-direction: column;
+  }
+
+  .profile-left {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #eeeeee;
+    padding-right: 0;
+    padding-bottom: 30px;
+  }
+
+  .statistics {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-card {
+    padding: 25px;
+  }
+
+  .profile-buttons {
+    flex-direction: column;
+  }
+
+  .primary-btn,
+  .warning-btn {
+    width: 100%;
+  }
+
+  .info-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .label {
+    width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .statistics {
+    grid-template-columns: 1fr;
+  }
+
+  .avatar {
+    width: 100px;
+    height: 100px;
+    font-size: 45px;
+  }
+
+  .profile-left h3 {
+    font-size: 20px;
+  }
+
+  .stat-card h3 {
+    font-size: 24px;
+  }
+}
+/* ==========================
+   服务评价
+========================== */
+
+.page {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.back-btn {
+  text-decoration: none;
+  color: #2b7de9;
+}
+
+.evaluate-card {
+  background: #fff;
+
+  border-radius: 10px;
+
+  padding: 20px;
+
+  margin-bottom: 20px;
+
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.info-item {
+  display: flex;
+
+  justify-content: space-between;
+
+  padding: 10px 0;
+
+  border-bottom: 1px solid #eee;
+}
+
+.info-item:last-child {
+  border: none;
+}
+
+.star-group {
+  margin-top: 15px;
+}
+
+.star {
+  font-size: 36px;
+
+  color: #ccc;
+
+  cursor: pointer;
+
+  margin-right: 10px;
+
+  transition: 0.3s;
+}
+
+.star.active {
+  color: #ffb400;
+}
+
+.tag-group {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  margin-top: 15px;
+}
+
+.tag-group button {
+  padding: 8px 15px;
+
+  border: 1px solid #2b7de9;
+
+  background: white;
+
+  color: #2b7de9;
+
+  border-radius: 20px;
+
+  cursor: pointer;
+}
+
+.tag-group button.active {
+  background: #2b7de9;
+
+  color: white;
+}
+
+textarea {
+  width: 100%;
+
+  padding: 15px;
+
+  border-radius: 8px;
+
+  border: 1px solid #ddd;
+
+  resize: none;
+
+  margin-top: 15px;
+}
+
+.submit-box {
+  text-align: center;
+
+  margin-top: 30px;
+}
+
+.submit-box button {
+  width: 220px;
+
+  height: 45px;
+
+  border: none;
+
+  background: #2b7de9;
+
+  color: white;
+
+  border-radius: 8px;
+
+  font-size: 16px;
+
+  cursor: pointer;
+}
+
+.submit-box button:hover {
+  background: #1565c0;
+}
+.evaluated-btn {
+  padding: 8px 16px;
+  background: #d9d9d9;
+  color: #666;
+  border: none;
+  border-radius: 6px;
+  cursor: not-allowed;
+  font-size: 14px;
+}
+/* ==========================================
+   评价中心（evaluate.html）
+========================================== */
+
+.evaluate-page {
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+.evaluate-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.evaluate-header h2 {
+  font-size: 28px;
+  color: #1976d2;
+}
+
+.back-link {
+  color: #2b7de9;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+/* 卡片 */
+
+.evaluate-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+}
+
+/* 标题 */
+
+.table-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* 表格 */
+
+.evaluate-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.evaluate-table thead {
+  background: #2b7de9;
+  color: white;
+}
+
+.evaluate-table th {
+  padding: 14px;
+  font-weight: normal;
+}
+
+.evaluate-table td {
+  padding: 14px;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+}
+
+.evaluate-table tbody tr:hover {
+  background: #f7fbff;
+}
+
+/* 状态 */
+
+.status-wait {
+  color: #ff9800;
+  font-weight: bold;
+}
+
+.status-finish {
+  color: #4caf50;
+  font-weight: bold;
+}
+
+/* 按钮 */
+
+.evaluate-btn {
+  padding: 8px 18px;
+  border: none;
+  border-radius: 6px;
+  background: #2b7de9;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.evaluate-btn:hover {
+  background: #1565c0;
+}
+
+.view-btn {
+  padding: 8px 18px;
+  border: none;
+  border-radius: 6px;
+  background: #9e9e9e;
+  color: white;
+  cursor: pointer;
+}
+
+.view-btn:hover {
+  background: #757575;
+}
+
+/* 空数据 */
+
+.empty-box {
+  text-align: center;
+  padding: 50px;
+  color: #999;
+}
+
+/* 响应式 */
+
+@media (max-width: 768px) {
+  .evaluate-header {
+    flex-direction: column;
+
+    gap: 15px;
+
+    align-items: flex-start;
+  }
+
+  .evaluate-card {
+    overflow-x: auto;
+  }
+
+  .evaluate-table {
+    min-width: 700px;
+  }
+}
+/* ==========================
+   地图选点
+========================== */
+
+#map {
+  width: 100%;
+
+  height: 350px;
+
+  margin-top: 15px;
+
+  border-radius: 8px;
+
+  border: 1px solid #ddd;
+}
+
+#address {
+  margin-top: 10px;
+
+  background: #f7f7f7;
+
+  cursor: not-allowed;
+}

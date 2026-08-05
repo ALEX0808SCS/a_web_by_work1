@@ -1,0 +1,35 @@
+<!doctype html>
+
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <title>工单详情</title>
+    <link rel="stylesheet" href="../css/worker.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+  </head>
+  <body>
+    <div class="topbar">
+      <h2>工单详情</h2>
+      <a href="workList.html">返回</a>
+    </div>
+
+    <div class="detail">
+      <p>工单编号：#1001</p>
+      <p>报修类型：路灯损坏</p>
+      <p>地点：XX路口</p>
+      <p>状态：待处理</p>
+
+      <button onclick="startWork()">开始处理</button>
+    </div>
+
+    <div class="detail">
+      <h2>维修地点</h2>
+      <div id="map"></div>
+    </div>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="../js/worker.js"></script>
+  </body>
+</html>

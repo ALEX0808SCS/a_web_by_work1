@@ -1,0 +1,67 @@
+<link rel="stylesheet" href="/css/style2.css" />
+<div class="evaluate-page">
+  <div class="evaluate-header">
+    <h2>评价中心</h2>
+
+    <a href="home.html" class="back-link"> 返回首页 </a>
+  </div>
+
+  <div class="evaluate-card">
+    <div class="table-title">已完成待评价工单</div>
+
+    <table class="evaluate-table">
+      <thead>
+        <tr>
+          <th>工单编号</th>
+
+          <th>设施类型</th>
+
+          <th>完成时间</th>
+
+          <th>状态</th>
+
+          <th>操作</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>RP20260001</td>
+
+          <td>路灯故障</td>
+
+          <td>2026-06-20</td>
+
+          <td>
+            <span class="status-wait"> 待评价 </span>
+          </td>
+
+          <td>
+            <button
+              class="evaluate-btn"
+              onclick="location.href = 'evaluateDetail.html'"
+            >
+              立即评价
+            </button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>RP20260002</td>
+
+          <td>井盖损坏</td>
+
+          <td>2026-06-18</td>
+
+          <td>
+            <span class="status-finish"> 已评价 </span>
+          </td>
+
+          <td>
+            <button class="view-btn">查看评价</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

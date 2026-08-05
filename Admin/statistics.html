@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>数据统计 - 市政设施管理系统</title>
+
+    <link rel="stylesheet" href="/css/style1.css" />
+  </head>
+
+  <body>
+    <div class="admin-container">
+      <!-- 左侧菜单 -->
+      <aside class="sidebar">
+        <div class="logo">
+          <h2>市政设施管理系统</h2>
+        </div>
+
+        <ul class="menu">
+          <li>
+            <a href="/Admin/admin.html">🏠 首页</a>
+          </li>
+
+          <li>
+            <a href="/Admin/user.html">👤 用户管理</a>
+          </li>
+
+          <li>
+            <a href="/Admin/repair.html">📝 工单管理</a>
+          </li>
+
+          <li>
+            <a href="/Admin/facility.html">🔧 设施管理</a>
+          </li>
+
+          <li class="active">
+            <a href="/Admin/statistics.html">📊 数据统计</a>
+          </li>
+          <li>
+            <a href="/Admin/archive.html">📁档案管理</a>
+          </li>
+          <li>
+            <a href="/Admin/quality.html">⭐服务质量</a>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- 主体 -->
+      <main class="main-content">
+        <header class="topbar">
+          <div class="welcome">数据统计</div>
+
+          <div class="admin-info">
+            <img src="images/avatar.png" alt="管理员" />
+
+            <span>管理员</span>
+          </div>
+        </header>
+
+        <section class="content">
+          <!-- 统计卡片 -->
+          <div class="card-group">
+            <div class="card">
+              <h3>设施总数</h3>
+              <p>325</p>
+            </div>
+
+            <div class="card">
+              <h3>报修总数</h3>
+              <p>158</p>
+            </div>
+
+            <div class="card">
+              <h3>已完成工单</h3>
+              <p>126</p>
+            </div>
+
+            <div class="card">
+              <h3>待处理工单</h3>
+              <p>32</p>
+            </div>
+          </div>
+
+          <!-- 数据统计表 -->
+          <div class="table-box">
+            <div class="table-title">月度报修统计</div>
+
+            <table>
+              <thead>
+                <tr>
+                  <th>月份</th>
+                  <th>报修数量</th>
+                  <th>完成数量</th>
+                  <th>完成率</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>1月</td>
+                  <td>20</td>
+                  <td>18</td>
+                  <td>90%</td>
+                </tr>
+
+                <tr>
+                  <td>2月</td>
+                  <td>18</td>
+                  <td>17</td>
+                  <td>94%</td>
+                </tr>
+
+                <tr>
+                  <td>3月</td>
+                  <td>26</td>
+                  <td>23</td>
+                  <td>88%</td>
+                </tr>
+
+                <tr>
+                  <td>4月</td>
+                  <td>30</td>
+                  <td>28</td>
+                  <td>93%</td>
+                </tr>
+
+                <tr>
+                  <td>5月</td>
+                  <td>34</td>
+                  <td>30</td>
+                  <td>88%</td>
+                </tr>
+
+                <tr>
+                  <td>6月</td>
+                  <td>30</td>
+                  <td>28</td>
+                  <td>93%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- 图表区域 -->
+          <div class="chart-grid">
+            <div class="chart-box">
+              <canvas id="lineChart"></canvas>
+            </div>
+
+            <div class="chart-box">
+              <canvas id="pieChart"></canvas>
+            </div>
+          </div>
+          <!-- 数据概览 -->
+          <div class="table-box" style="margin-top: 30px">
+            <div class="table-title">数据概览</div>
+
+            <table>
+              <thead>
+                <tr>
+                  <th>统计项目</th>
+                  <th>数量</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>正常设施</td>
+                  <td>290</td>
+                </tr>
+
+                <tr>
+                  <td>维修中设施</td>
+                  <td>20</td>
+                </tr>
+
+                <tr>
+                  <td>待维修设施</td>
+                  <td>15</td>
+                </tr>
+
+                <tr>
+                  <td>注册用户</td>
+                  <td>512</td>
+                </tr>
+
+                <tr>
+                  <td>管理员</td>
+                  <td>8</td>
+                </tr>
+
+                <tr>
+                  <td>维修人员</td>
+                  <td>25</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+        </section>
+      </main>
+    </div>
+
+    <script src="/js/admin.js"></script>
+  </body>
+</html>

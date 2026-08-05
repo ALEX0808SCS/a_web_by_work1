@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>用户首页 - 市政设施管理系统</title>
+
+    <link rel="stylesheet" href="/css/home.css" />
+    <script defer src="/js/home.js"></script>
+
+    <!-- Font Awesome 图标 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- 顶部导航 -->
+    <header class="header">
+      <div class="logo">
+        <i class="fa-solid fa-city"></i>
+        <span>市政设施管理系统</span>
+      </div>
+
+      <div class="user-box">
+        <span>
+          <i class="fa-solid fa-user"></i>
+          欢迎您，普通用户
+        </span>
+
+        <button id="logoutBtn">
+          <i class="fa-solid fa-right-from-bracket"></i>
+          退出登录
+        </button>
+      </div>
+    </header>
+
+    <!-- 欢迎区域 -->
+
+    <section class="welcome">
+      <h2>欢迎使用市政设施管理系统</h2>
+
+      <p>您可以在线提交市政设施报修、查看处理进度以及浏览最新公告。</p>
+    </section>
+
+    <!-- 功能卡片 -->
+
+    <section class="cards">
+      <div class="card" onclick="goRepair()">
+        <i class="fa-solid fa-screwdriver-wrench"></i>
+
+        <h3>我要报修</h3>
+
+        <p>提交新的设施报修申请</p>
+      </div>
+
+      <div class="card" onclick="goHistory()">
+        <i class="fa-solid fa-list-check"></i>
+
+        <h3>我的报修</h3>
+
+        <p>查看报修处理进度</p>
+      </div>
+
+      <div class="card" onclick="goProfile()">
+        <i class="fa-solid fa-address-card"></i>
+
+        <h3>个人中心</h3>
+
+        <p>查看个人资料信息</p>
+      </div>
+
+      <div class="card" onclick="goEvaluate()">
+        <i class="fa-solid fa-address-card"></i>
+
+        <h3>评价中心</h3>
+
+        <p>查看评价信息</p>
+      </div>
+    </section>
+
+    <!-- 最近报修 -->
+
+    <section class="table-area">
+      <div class="title">
+        <h2>最近报修记录</h2>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>编号</th>
+
+            <th>报修内容</th>
+
+            <th>地点</th>
+
+            <th>时间</th>
+
+            <th>状态</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>10001</td>
+
+            <td>路灯损坏</td>
+
+            <td>人民路</td>
+
+            <td>2026-06-20</td>
+
+            <td class="doing">处理中</td>
+          </tr>
+
+          <tr>
+            <td>10002</td>
+
+            <td>井盖松动</td>
+
+            <td>幸福大道</td>
+
+            <td>2026-06-18</td>
+
+            <td class="finish">已完成</td>
+          </tr>
+
+          <tr>
+            <td>10003</td>
+
+            <td>垃圾桶破损</td>
+
+            <td>广场东路</td>
+
+            <td>2026-06-15</td>
+
+            <td class="wait">待受理</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- 页脚 -->
+
+    <footer>Copyright © 2026 市政设施管理系统</footer>
+  </body>
+</html>
