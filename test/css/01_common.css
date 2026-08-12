@@ -1,0 +1,178 @@
+/* 
+公共组件样式
+包括：
+1.页面容器
+2.卡片
+3.按钮
+4.输入框
+5.表格
+6.状态标签
+
+所有人员角色都可以使用
+*/
+
+/* =================
+    页面公共容器
+==================== */
+.page-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+/* ================
+    卡片组件
+=================== */
+.common-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+/* ==============
+    鼠标移动效果
+================= */
+.common-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+/* ============
+    标题组件
+=============== */
+.page-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1976d2;
+  margin-bottom: 20px;
+}
+/* 小标题 */
+.section-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #333;
+}
+/* ==========
+    按钮组件
+============== */
+/* 普通按钮 */
+.btn-primary {
+  background: #1976d2;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 6px;
+  font-size: 15px;
+}
+.btn-primary:hover {
+  background: #1565c0;
+}
+/* 普通取消按钮 */
+.btn-default {
+  background: #eee;
+  color: #555;
+  padding: 10px 25px;
+  border-radius: 6px;
+}
+.btn-default:hover {
+  background: #ddd;
+}
+/* 删除按钮 */
+.btn-danger {
+  background: #e53935;
+  color: white;
+  padding: 8px 18px;
+  border-radius: 6px;
+}
+.btn-danger:hover {
+  background: #c62828;
+}
+/* =============
+    表单组件
+=============== */
+/* 输入框统一样式 */
+.common-input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+}
+.common-input:focus {
+  border-color: #1976d2;
+  box-shadow: 0 0 5px rgba(25, 118, 210, 0.3);
+}
+/* ===================
+    表格组件
+========================= */
+/* 
+    后台管理表格
+    工单列表
+    用户列表
+ */
+.common-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+.common-table th {
+  background: #1976d2;
+  color: white;
+  padding: 12px;
+}
+.common-table td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+}
+.common-table tr:hover {
+  background: #f5f9ff;
+}
+/* ===================
+    状态标签
+====================== */
+/* 
+    工单状态：待处理|处理中|已完成
+*/
+.status {
+  display: inline-block;
+
+  padding: 5px 12px;
+
+  border-radius: 15px;
+
+  font-size: 13px;
+}
+/*
+   等待状态
+*/
+
+.status-wait {
+  background: #fff3cd;
+  color: #856404;
+}
+
+/*
+   处理中
+*/
+
+.status-processing {
+  background: #cfe2ff;
+  color: #084298;
+}
+
+/*
+   完成
+*/
+
+.status-success {
+  background: #d1e7dd;
+  color: #0f5132;
+}
+/* ==================
+    空数据提示 
+========================*/
+.empty-text {
+  text-align: center;
+  color: #999;
+  padding: 30px;
+}
